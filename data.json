@@ -1,0 +1,68 @@
+{
+  "currentUser": {
+    "image": { 
+      "png": "./images/avatars/Ian.png",
+      "webp": "./images/avatars/Ian.webp"
+    },
+    "username": "Ian"
+  },
+  "comments": [
+    {
+      "id": 1,
+      "content": "a receita tava muito boa",
+      "createdAt": "1 mes atras",
+      "score": 12,
+      "user": {
+        "image": { 
+          "png": "./images/avatars/Venus.png",
+          "webp": "./images/avatars/Venus.webp"
+        },
+        "username": "Vênus"
+      },
+      "replies": []
+    },
+    {
+      "id": 2,
+      "content": "ficou delicioso, seguindo essa receita",
+      "createdAt": "3 dias atras",
+      "score": 5,
+      "user": {
+        "image": { 
+          "png": "./images/avatars/Duda.png",
+          "webp": "./images/avatars/Duda.webp"
+        },
+        "username": "Duda"
+      },
+      "replies": [
+        {
+          "id": 3,
+          "content": "isso pq tu não viu a da minha avó",
+          "createdAt": "2 horas atras",
+          "score": 4,
+          "replyingTo": "Duda",
+          "user": {
+            "image": { 
+              "png": "./images/avatars/João.png",
+              "webp": "./images/avatars/João.webp"
+            },
+            "username": "João"
+          }
+        },
+        {
+          "id": 4,
+          "content": "Lembro de quando fui te visitar e ela fez pra gente",
+          "createdAt": "1 hora atras",
+          "score": 2,
+          "replyingTo": "João",
+          "user": {
+            "image": { 
+              "png": "./images/avatars/Ian.png",
+              "webp": "./images/avatars/Ian.webp"
+            },
+            "username": "Ian"
+          }
+        }
+      ]
+    }
+  ]
+}
