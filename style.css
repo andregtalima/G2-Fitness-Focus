@@ -41,7 +41,7 @@
 
 }
 
-#msgError, #msgSuccess, #logado {
+#msgError, #msgSuccess, #logado, #msgResultado {
     display: none;
 }
 
@@ -69,8 +69,7 @@ p{
     line-height: 1.5;
 }
 body{
-    background-color: var(--Very-light-gray);
-    background-image: url(assets/bg.jpeg);
+    background-image: url(./assets/bg.jpeg);
 }
 
 a{
@@ -103,11 +102,6 @@ button:hover{
     max-width: 75ch;
     margin: auto;
     margin-top: 1rem;
-    .container{
-        border-radius: 8px;
-        padding: 1.5rem;
-        background-color: var(--White);
-    }
 }
 .comment{
     margin-bottom: 1rem;
@@ -251,7 +245,6 @@ button:hover{
 @media screen and (max-width:640px) {
     .container{
         padding: .75rem;
-        background-color: var(--White);
     }
     .replies{
         padding-left: 1rem;
@@ -312,8 +305,6 @@ button:hover{
     "heading heading"
     "body body"
     "no yes";
-    background-color: var(--White);
-    
 }
 
 .invisible{
@@ -367,7 +358,3 @@ ol li {
   .btn-dislike:hover {
     color: red;
   }
-
-.carousel {margin-left: 7rem; margin-right: 7rem;}
-
-.carousel-inner {border-radius: 2%;}
