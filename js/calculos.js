@@ -148,3 +148,27 @@ function consumoDiarioDeAgua() {
         return 'Informa seu consumo diário de água';
     } 
 }
+
+function caloriasParaEmagrecer() {
+
+    let msgResultado = document.querySelector('#msgResultado'); 
+    let objetivoEmagrecer = (0.85 * parseInt(tdee.value)).toFixed(0);
+    msgResultado.setAttribute('style', 'display: block');
+    msgResultado.innerHTML = `<h3 class="fw-bold">Você precisa de ${objetivoEmagrecer} para emagrecer</h3>`;
+}
+
+function caloriasParaManter() {
+
+    let msgResultado = document.querySelector('#msgResultado'); 
+    let objetivoEmagrecer = parseInt(tdee.value).toFixed(0);
+    msgResultado.setAttribute('style', 'display: block');
+    msgResultado.innerHTML = `<h3 class="fw-bold">Você precisa de ${objetivoEmagrecer} para manter</h3>`;
+}
+
+function caloriasParaGanhar() {
+
+    let msgResultado = document.querySelector('#msgResultado'); 
+    let objetivoEmagrecer = (1.2 * parseInt(tdee.value)).toFixed(0);
+    msgResultado.setAttribute('style', 'display: block');
+    msgResultado.innerHTML = `<h3 class="fw-bold">Você precisa de ${objetivoEmagrecer} para ganhar</h3>`
+}
