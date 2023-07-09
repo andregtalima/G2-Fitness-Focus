@@ -106,6 +106,9 @@ function salvarResultados() {
 function limparResultados() {
     let msgSuccess = document.querySelector('#msgSuccess');
     msgSuccess.setAttribute('style', 'display: none');
+
+    let msgResultado = document.querySelector('#msgResultado');
+    msgResultado.setAttribute('style', 'display: none');
         
     tmb.value = '';
     tdee.value = '';
