@@ -38,9 +38,10 @@ sair.addEventListener('click', (e) => {
 
 adicionar.addEventListener('click', (e) => {
     e.preventDefault();
-     mostraResultados(); 
-     salvarResultados();
-     limpaFormulario();
+    mostraResultados(); 
+    caloriasPorObjetivo();
+    salvarResultados();
+    limpaFormulario();
 });
 
 limpar.addEventListener('click', (e) => {
@@ -52,7 +53,7 @@ function mostraResultados() {
 
     let msgError = document.querySelector('#msgError');
     let msgSuccess = document.querySelector('#msgSuccess');
-
+    
     if(idade.value && altura.value && peso.value && consumoAgua.value) {
         tmb.value = `${mostraTMB()} Calorias`;
         tdee.value = `${mostraTdee()} Calorias`;
@@ -71,10 +72,11 @@ function mostraResultados() {
     if(sexo.value == 'Selecionar' || objetivo.value == 'Qual o seu objetivo?' || atividade.value == 'Qual seu nível de atividade?') {
         msgError.setAttribute('style', 'display: block');
         msgSuccess.setAttribute('style', 'display: none');
-    }    
+    } 
 }
 
 function limpaFormulario() {
+
     sexo.value = 'Selecionar';
     idade.value = '';
     altura.value = '';
@@ -104,7 +106,7 @@ function salvarResultados() {
 function limparResultados() {
     let msgSuccess = document.querySelector('#msgSuccess');
     msgSuccess.setAttribute('style', 'display: none');
-    
+        
     tmb.value = '';
     tdee.value = '';
     imc.value = '';
@@ -165,6 +167,19 @@ function mostraPesoIdeal() {
             return pesoIdealHomem();
         case 'feminino':
             return pesoIdealMulher();
+        default:
+            return '';
+    }
+}
+
+function caloriasPorObjetivo() {
+    switch (objetivo.value) {
+        case 'emagrecer':
+            return caloriasParaEmagrecer();
+        case 'manter':
+            return caloriasParaManter();
+        case 'ganhar':
+            return caloriasParaGanhar();
         default:
             return '';
     }
